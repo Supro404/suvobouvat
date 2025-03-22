@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>বিয়ের আমন্ত্রণ</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', serif;
+            background: url('https://cfw51.rabbitloader.xyz/eyJjIjp0cnVlLCJoIjoiY2FteW9naS5pbiIsInYiOjUyOTkxNDMwOCwiciI6MSwiaSI6ImZmNDM3YTE3LTA2MjMtNGU2Mi1mYzY0LTRkMzE4OWYwNDEwMCJ9/blog/wp-content/uploads/2019/11/Untitled-2-1140x760-1.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #333;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            max-width: 600px;
+            border: 2px solid #C89F2D;
+        }
+        h1, h2 {
+            color: #800020;
+            font-style: italic;
+        }
+        h1 {
+            font-size: 24px;
+            color: #5A0B0B;
+        }
+        h2 {
+            font-size: 28px;
+            color: #C89F2D;
+        }
+        .details {
+            font-size: 18px;
+            margin-top: 10px;
+            color: #333;
+        }
+        .countdown {
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 15px;
+            color: #800020;
+        }
+        a {
+            color: #8B6508;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1><em>অভিজিৎ দে & অনুশ্রী মাখাল</em></h1>
+        <p>আমাদের আদরের পুত্র অভিজিৎ ও প্রিয় কন্যাসমা অনুশ্রী-র শুভ বিবাহ উপলক্ষে, আমাদের আনন্দের দিনে আপনাকে ও আপনার পরিবারকে সস্নেহ আমন্ত্রণ জানাচ্ছি। আপনার উপস্থিতি আমাদের পরিপূর্ণ করবে এবং আশীর্বাদ নবদম্পতিকে সুখী দাম্পত্য জীবনের পথে এগিয়ে নিয়ে যাবে। অনুগ্রহ করে ২০শে এপ্রিল ২০২৫, সন্ধ্যা বেলা আমাদের সঙ্গে এই শুভ মুহূর্ত উদযাপন করতে অনিন্দিতা অঙ্কিতা ভবন-এ উপস্থিত থাকুন এবং আশীর্বাদ প্রদান করুন।</p>
+        <p>মাতা: রীনা দে</p>
+        <h2>শুভ বৌভাত</h2>
+        <p>তারিখ</p>
+        <h2>২০শে এপ্রিল ২০২৫, সন্ধ্যা</h2>
+        <p class="details">স্থান: <a href="https://maps.app.goo.gl/GnJPfF8XvQahWkqd8" target="_blank">অনিন্দিতা অঙ্কিতা ভবন Google Map</a></p>
+        <h1>আপনার শুভাগমনই আমাদের আনন্দের পরিপূর্ণতা।</h1>
+        <div class="countdown" id="countdown"></div>
+    </div>
+    <script>
+        function updateCountdown() {
+            const weddingDate = new Date("2025-04-20T18:00:00").getTime();
+            const now = new Date().getTime();
+            const difference = weddingDate - now;
+
+            const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+            
+            document.getElementById("countdown").innerHTML = `${days}দিন : ${hours}ঘণ্টা : ${minutes}মিনিট : ${seconds}সেকেন্ড`;
+        }
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+    </script>
+</body>
+</html>
